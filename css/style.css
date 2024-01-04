@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+* {
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  /* background-image: url(../img/bg2.jpg); */
+  background-color: #040d12;
+  height: 100vh;
+  background-position: bottom;
+  background-size: cover;
+}
+
+.box { 
+  position: absolute;
+  height: 515px;
+  width: 380px;
+  border-radius: 25px;
+  /* border: 1px solid whitesmoke; */
+  /* background-color: rgba(255, 255, 255, 0.3); */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* backdrop-filter: blur(4px); */
+}
+
+.judul {
+  text-align: center;
+  color: whitesmoke;
+  font-weight: 600;
+  font-size: 25px;
+  margin: 0 0 20px 0;
+}
+
+.inputBox {
+  display: grid;
+  margin: 10px 30px;
+}
+
+.inputBox label {
+  color: rgb(236, 231, 226);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.inputBox input {
+  background-color: lightsteelblue;
+  height: 25px;
+  border: 1px solid rgb(236, 231, 226);
+  outline: none;
+  margin-top: 3px;
+  padding: 5px 10px;
+  color: #040d12;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.remember {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.remember input {
+  width: 10px;
+  height: 10px;
+  margin-top: 9px;
+}
+
+.remember label {
+  font-size: 11px;
+  color: white;
+  margin-top: 6px;
+  margin-bottom: 5px;
+}
+
+.signUp{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.signUp button{
+  background-color: lightsteelblue;
+  width: 70px;
+  height: 33px;
+  margin-top: 10px;
+  border-radius: 50px;
+  color: black;
+  font-weight: 600;
+  border: none;
+}
+
+.signWith {
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.account {
+  display: flex;
+  margin-top: 10px;
+  gap: 30px;
+  justify-content: center;
+}
+
+.sosmed {
+  position: relative;
+  height: 35px;
+  width: 35px;
+  border-radius: 25px;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  position: absolute;
+  width: 20px; 
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 11px;
+  color: white;
+}

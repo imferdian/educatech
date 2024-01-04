@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../dist/style.css">
+</head>
+<body class="font-poppins bg-baltic-950">
+    <div class="mt-5 ml-5 w-max lg:ml-12">
+            <a href="index.html">
+                <h1 class="text-white lg:text-xl">
+                    <span class="font-bold"><</span> Home
+                </h1>
+            </a>
+        </div>
+    <div class="flex flex-col justify-center min-h-screen px-6 py-2 bg-baltic-950 lg:px-8">
+        
+        <div class="sm:mx-auto sm:w-full sm:max-w-md">
+            <h2 class="mt-2 text-3xl font-extrabold text-center text-gray-200">
+                Sign in to your account
+            </h2>
+            <p class="mt-2 text-sm text-center text-gray-200 max-w">
+                Or
+                <a href="register.html" class="font-medium text-orange-600 hover:text-orange-700">
+                    create an account
+                </a>
+            </p>
+        </div>
+        <div class="mt-11 sm:mx-auto sm:w-full sm:max-w-md">
+            <div class="px-4 py-8 rounded-lg shadow bg-baltic-900 sm:px-10">
+                <form class="space-y-5" action="#" method="post">
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-200">
+                            Email address
+                        </label>
+                        <div class="mt-1">
+                            <input id="email" name="email" type="email" autocomplete="email" required
+                                class="relative block w-full px-3 py-2 text-sm text-gray-900 placeholder-gray-600 border border-gray-300 rounded-md appearance-none focus:outline-none focus:ring-orange-500 focus:border-orange-500 focus:z-10 sm:text-sm placeholder:text-sm bg-slate-300 lg:text-base"
+                                placeholder="Enter your email address">
+                        </div>
+                    </div>
+    
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-gray-200">
+                            Password
+                        </label>
+                        <div class="mt-1">
+                            <input id="password" name="password" type="password" autocomplete="current-password" required
+                                class="relative block w-full px-3 py-2 text-sm text-gray-900 placeholder-gray-600 border border-gray-300 rounded-md appearance-none focus:outline-none focus:ring-orange-500 focus:border-orange-500 focus:z-10 sm:text-sm placeholder:text-sm bg-slate-300 lg:text-base"
+                                placeholder="Enter your password">
+                        </div>
+                    </div>
+    
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <input id="remember" name="remember" type="checkbox"
+                                class="w-3 h-3 ml-2 border-gray-300 rounded">
+                            <label for="remember" class="block ml-1 text-sm text-gray-300">
+                                Remember me
+                            </label>
+                        </div>
+                        
+                    </div>
+    
+                    <div>
+                        <button type="submit" name="login"
+                            class="relative flex justify-center px-4 py-2 mx-auto text-sm font-medium text-white bg-orange-600 border border-transparent rounded-md group hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500">
+                            Sign in
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</html>

@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Educatech</title>
+    <link rel="stylesheet" href="./dist/style.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+      .welcome {
+            background-color: #1f1d25;
+            background-image:  
+                linear-gradient(rgba(52, 37, 33, 0.5) 1px, transparent 1px), 
+                linear-gradient(to right, rgba(52, 37, 33, 0.5) 1px, #1f1d25 1px);
+            background-size: 30px 30px;
+      }
+    </style>
+  </head>
+  <body class="overflow-x-hidden font-poppins scrollbar scrollbar-thumb-orange-600 scrollbar-track-baltic-950">
+    <!-- Header Start -->
+    <header class="py-3 px-5 z-[2] fixed top-0 left-0 w-full flex">
+
+      <button id="nav" type="button" class="rounded-md text-slate-200 absolute z-10 right-9 top-[26px] block lg:hidden">
+        <span class="transition duration-300 ease-in-out origin-top-left hamburger-line"></span>
+          <span class="transition duration-300 ease-in-out hamburger-line"></span>
+          <span class="transition duration-300 ease-in-out origin-top-left hamburger-line"></span> 
+      </button>
+
+      <div id="nav-head"
+        class="relative flex flex-row items-center justify-between w-full h-16 px-5 mx-auto border backdrop-blur-xl backdrop-filter bg-baltic-900/60 border-baltic-800 lg:rounded-2xl rounded-xl bayangan">
+        <a href="#home" class="flex">
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0.00 0.00 450.00 384.00" class="mr-3 h-7 w-7">
+            <path fill="#ea580b" d="   M 111.97 65.60   Q 84.78 59.63 57.37 53.23   C 53.91 52.42 51.74 49.04 52.25 45.66   Q 52.95 40.99 58.17 39.75   Q 177.27 11.37 220.56 1.23   Q 228.85 -0.71 238.14 1.48   Q 317.43 20.19 400.24 39.98   C 404.74 41.06 406.28 45.89 404.52 49.92   C 403.64 51.94 401.97 52.80 399.93 53.29   Q 368.79 60.86 335.47 68.47   Q 334.88 68.61 334.88 69.21   Q 335.01 84.23 334.91 100.75   Q 334.90 102.15 336.26 102.69   C 360.09 112.14 382.46 126.47 397.01 146.90   Q 404.74 157.75 409.33 171.96   Q 409.76 173.28 410.91 174.06   Q 444.85 197.21 446.45 237.36   Q 446.72 244.01 445.13 252.28   C 440.78 274.97 427.09 293.34 406.79 304.77   Q 401.53 307.73 395.52 309.62   C 394.38 309.98 393.49 310.99 392.92 312.01   Q 377.62 339.31 351.19 355.34   C 342.69 360.50 333.20 365.14 323.73 368.39   C 300.81 376.28 277.16 380.17 253.24 381.27   Q 236.20 382.05 215.12 381.69   C 191.53 381.30 167.80 378.76 145.14 372.32   Q 124.09 366.34 108.24 357.17   Q 78.88 340.17 63.16 311.16   A 2.66 2.64 -5.0 0 0 61.66 309.91   C 36.25 301.59 17.34 280.05 11.82 254.06   C 5.09 222.36 18.43 191.41 45.58 174.18   Q 46.70 173.48 47.09 172.18   C 57.20 138.24 88.23 114.98 120.17 102.88   A 2.16 2.15 -10.5 0 0 121.56 100.87   L 121.55 79.05   A 0.38 0.38 0.0 0 0 121.11 78.67   Q 120.97 78.69 120.84 78.74   Q 120.63 78.82 120.49 78.99   Q 116.10 83.93 111.43 88.18   Q 88.88 108.70 62.13 122.04   A 2.10 2.09 -7.2 0 0 61.01 123.48   Q 58.76 133.94 46.94 134.90   C 44.20 135.12 41.61 133.87 39.45 132.33   A 1.81 1.79 45.3 0 0 37.39 132.31   Q 29.30 137.90 20.99 144.29   C 18.69 146.06 13.82 149.54 11.18 147.29   C 6.27 143.09 4.22 133.53 4.55 127.86   Q 4.86 122.50 10.14 121.86   Q 19.60 120.72 28.63 119.37   Q 30.95 119.02 33.22 118.23   A 1.25 1.24 88.6 0 0 34.01 117.40   Q 34.91 114.22 36.54 112.30   Q 44.16 103.33 54.99 109.43   A 1.12 1.12 0.0 0 0 56.12 109.41   C 60.34 106.77 64.95 104.60 69.17 101.98   Q 93.42 86.90 112.39 66.95   Q 113.37 65.91 111.97 65.60   Z   M 128.97 228.15   Q 131.14 205.82 151.09 192.80   C 158.74 187.81 167.83 185.64 177.07 185.67   Q 229.41 185.83 280.24 185.65   C 288.39 185.62 295.73 187.09 303.04 190.92   C 326.84 203.41 334.93 231.23 323.93 255.30   C 318.21 267.81 307.20 277.94 295.22 284.16   Q 288.92 287.44 281.32 290.49   Q 280.92 290.65 281.03 291.05   L 292.39 334.19   Q 292.55 334.78 293.14 334.65   Q 308.69 331.25 323.31 324.13   Q 352.71 309.79 363.69 278.97   Q 368.88 264.38 370.74 247.62   Q 373.36 224.07 372.64 194.87   C 371.82 161.58 332.91 142.35 304.74 134.56   Q 304.24 134.42 303.77 134.63   Q 273.04 148.61 238.06 148.63   Q 226.83 148.63 214.95 148.39   Q 197.00 148.03 177.28 143.08   Q 165.23 140.06 154.08 134.67   A 1.94 1.93 -39.8 0 0 152.71 134.55   Q 135.83 139.35 120.94 147.51   C 101.77 158.01 84.68 173.61 84.50 196.95   Q 84.32 218.79 85.82 239.25   C 87.94 268.04 95.76 297.68 119.90 315.60   Q 133.44 325.66 152.63 331.64   Q 158.30 333.41 164.20 334.67   A 0.88 0.88 0.0 0 0 165.23 334.04   L 176.48 291.47   A 0.94 0.93 -72.1 0 0 175.91 290.35   C 159.86 284.09 143.79 274.35 135.35 258.72   Q 127.43 244.06 128.97 228.15   Z   M 181.48 207.35   C 175.38 207.71 171.08 212.63 168.46 217.96   A 0.56 0.56 0.0 0 0 168.97 218.77   L 195.44 218.70   A 0.68 0.68 0.0 0 0 196.04 217.69   C 192.86 211.83 188.76 206.93 181.48 207.35   Z   M 284.20 217.53   Q 282.28 213.96 279.50 211.05   C 274.93 206.29 267.23 205.99 262.32 210.42   Q 258.50 213.86 256.78 218.09   A 0.50 0.50 0.0 0 0 257.24 218.77   L 283.48 218.73   Q 284.85 218.73 284.20 217.53   Z   M 198.11 231.44   A 1.22 1.22 0.0 0 0 199.30 229.99   L 198.03 223.41   A 1.22 1.22 0.0 0 0 196.84 222.42   L 167.45 222.35   A 1.22 1.22 0.0 0 0 166.25 223.33   L 164.90 230.05   A 1.22 1.22 0.0 0 0 166.09 231.51   L 198.11 231.44   Z   M 255.62 222.37   A 1.23 1.23 0.0 0 0 254.41 223.40   L 253.28 230.06   A 1.23 1.23 0.0 0 0 254.50 231.50   L 286.27 231.48   A 1.23 1.23 0.0 0 0 287.48 230.04   L 286.32 223.41   A 1.23 1.23 0.0 0 0 285.11 222.39   L 255.62 222.37   Z   M 165.88 234.50   A 0.91 0.91 0.0 0 0 164.99 235.57   L 166.27 242.90   A 0.91 0.91 0.0 0 0 167.17 243.65   L 196.71 243.58   A 0.91 0.91 0.0 0 0 197.61 242.79   L 198.58 235.57   A 0.91 0.91 0.0 0 0 197.68 234.54   L 165.88 234.50   Z   M 254.78 234.51   A 0.99 0.99 0.0 0 0 253.80 235.66   L 255.00 242.85   A 0.99 0.99 0.0 0 0 255.98 243.68   L 285.41 243.57   A 0.99 0.99 0.0 0 0 286.39 242.71   L 287.30 235.64   A 0.99 0.99 0.0 0 0 286.32 234.52   L 254.78 234.51   Z   M 168.69 248.49   C 175.40 261.44 188.82 260.78 195.67 248.20   A 0.48 0.47 14.2 0 0 195.25 247.50   L 169.31 247.47   A 0.70 0.70 0.0 0 0 168.69 248.49   Z   M 271.62 257.88   A 12.85 12.84 -70.8 0 0 279.40 254.12   Q 279.41 254.11 282.82 250.66   Q 285.94 247.50 281.50 247.49   L 258.18 247.47   A 0.76 0.76 0.0 0 0 257.51 248.58   C 260.28 253.79 265.45 258.55 271.62 257.88   Z   M 266.65 294.90   C 258.71 297.26 250.20 297.88 241.62 298.55   C 236.81 298.92 232.13 298.62 227.31 298.88   Q 221.74 299.18 216.54 298.78   Q 202.91 297.71 190.83 295.05   A 0.93 0.92 -75.8 0 0 189.74 295.71   L 178.49 336.75   A 0.72 0.71 12.1 0 0 179.08 337.65   C 211.43 342.33 245.27 341.68 278.09 337.53   Q 279.26 337.39 278.94 336.25   L 267.74 295.51   A 0.88 0.87 -15.6 0 0 266.65 294.90   Z"/>
+            </svg>
+          <h1 class="text-xl text-white md:text-lg lg:text-xl">Educatech</h1>
+        </a>
+
+        <nav id="nav-menu" class="lg:flex lg:flex-row lg:relative lg:left-[300px] lg:top-[10px] mt-6 lg:mt-2 absolute text-center w-max tengah lg:gap-12 hidden">
+          <ul class="flex-row items-center block text-base font-light text-white lg:flex lg:gap-6 lg:text-sm">
+            <li class="pb-2 lg:pb-0">
+              <a href="#home" class="hover:text-orange-500 transition-all delay-75 lg:tracking-[1px]">Beranda</a>
+            </li>
+            <li class="pb-2 lg:pb-0">
+              <a href="article.html" class="hover:text-orange-500 transition-all delay-75 lg:tracking-[1px]">Artikel</a>
+            </li>
+            <li class="pb-2 lg:pb-0">
+              <a href="sumberdaya.html" class="hover:text-orange-500 transition-all delay-75 lg:tracking-[1px]">Sumber Daya Pendidikan</a>
+            </li>
+            <li class="pb-6 lg:pb-0">
+              <a href="#about" class="hover:text-orange-500 transition-all delay-75 lg:tracking-[1px]">Tentang Kami</a>
+            </li>
+          </ul>
+
+          <a href="login.html">
+            <button type="submit" name="login" class="w-16 text-sm font-medium text-white rounded-md h-7 bg-gradient-to-tr from-orange-700 to-orange-400 hover:from-orange-800 hover:to-orange-500 active:from-orange-900 active:to-orange-600 lg:text-sm md:text-xs lg:relative">Login</button>
+          </a>
+
+        </nav>
+      </div>
+    </header>
+  <!-- Header End -->
+
+    <!-- Welcome Start -->
+    <section id="home" class="welcome">
+      <div class="w-full h-44 bg-gradient-to-b from-baltic-950 via-baltic-950 to-transparent">
+      </div>
+      <div class="container mx-auto lg:mt-8">
+        <div class="w-full px-7 ">
+          <div class="max-w-md mx-auto my-6 text-center lg:max-w-xl">
+            <h1 class="text-3xl font-semibold leading-tight text-white lg:text-5xl lg:font-semibold">Hai! Selamat Datang di <span class="block text-transparent bg-gradient-to-tr from-orange-700 to-orange-400 bg-clip-text">Educatech</span></h1>
+            <p class="text-lg font-normal text-[#8f8ba1] leading-tight mt-2 lg:text-xl">
+              Kumpulan informasi untuk edukasi perkembangan teknologi di dunia pendidikan
+            </p>
+            <!--  -->
+            <a href="#timeline" class="">
+              <button class="px-3 py-2 mt-10 text-white transition-all duration-200 rounded-lg shadow-2xl bg-gradient-to-tr from-orange-700 via-orange-500 to-orange-400 hover:shadow-none hover:from-orange-800 hover:via-orange-600 hover:to-orange-500 active:from-orange-900 active:via-orange-700 active:to-orange-600 active:scale-95">
+                🚀 Explore 
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="w-full h-48 bg-gradient-to-t from-baltic-950 via-baltic-950 to-transparent">
+      </div>
+    </section>
+<!-- Welcome End -->
+
+<!-- Timeline Start -->
+    <section id="timeline" class="pb-16 bg-baltic-950">
+      <div class="pb-10">
+          <h1 class="px-2 text-2xl font-semibold tracking-wider text-center text-orange-500 lg:text-3xl">Timeline Perkembangan Teknologi <span class="lg:block">Dalam Pendidikan</span> </h1>
+      </div>
+      <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+          <div 
+          data-aos="fade-up-right" 
+          data-aos-easing="ease-in-sine" 
+          class="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:h-full">
+            <img
+              alt="media"
+              src="./img/media.png"
+              class="absolute inset-0 object-cover w-full h-full"
+            />
+          </div>
+          <div data-aos="fade-up-left" data-aos-easing="ease-in-sine" class="lg:py-8 lg:order-last">
+            <h2 class="text-3xl font-bold text-orange-600 sm:text-4xl">Tahun 1950an - 1960an</h2>
+            <p class="mt-4 font-light text-justify text-slate-100">
+              Pada era 1950-an hingga 1960-an, ditandai dengan pendahuluan kursus komputer di perguruan tinggi yang memperkenalkan penggunaan komputer untuk pengajaran matematika dan ilmu komputer. Perguruan tinggi mulai mengintegrasikan teknologi komputer ke dalam kurikulum dengan tujuan memberikan pemahaman yang lebih mendalam tentang konsep-konsep komputasi. Saat itulah juga terjadi pengembangan program-program awal yang dirancang khusus untuk membantu proses pembelajaran komputer. Program-program ini bertujuan memperkenalkan mahasiswa pada dasar-dasar pemrograman dan konsep ilmu komputer. Langkah-langkah ini menjadi landasan bagi perkembangan lebih lanjut dalam mengintegrasikan teknologi komputer dalam konteks pendidikan tinggi, membuka pintu bagi perkembangan lebih lanjut di bidang pendidikan dan teknologi.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Batas -->
+    <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8 lg:py-16 ">
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16 ">
+        <div data-aos="fade-up-left" data-aos-easing="ease-in-sine" class="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:h-full lg:order-last">
+          <img
+            alt="apllecom"
+            src="./img/applecom.jpg"
+            class="absolute inset-0 object-cover w-full h-full"
+          />
+        </div>
+        <div data-aos="fade-up-right" data-aos-easing="ease-in-sine" class="lg:py-8">
+          <h2 class="text-3xl font-bold text-orange-600 sm:text-4xl">Tahun 1970an - 1980an</h2>
+          <p class="mt-4 font-light text-justify text-white">
+            Pada dekade 1970-an hingga 1980-an, terjadi tonggak sejarah dalam pendidikan dengan munculnya komputer pribadi yang diperuntukkan untuk penggunaan di sekolah-sekolah. Penyediaan komputer pribadi, seperti Apple II dan Commodore PET, membuka akses kepada siswa untuk mengembangkan pemahaman dan keterampilan dalam penggunaan teknologi. Sekolah-sekolah mulai melibatkan siswa dalam pembelajaran interaktif melalui penggunaan perangkat lunak pendidikan pertama seperti "Oregon Trail" yang memperkenalkan konsep sejarah dan navigasi, serta "Logo" yang memberikan pemahaman dasar tentang pemrograman melalui penggunaan tata letak grafis. Kedua perangkat lunak ini tidak hanya menciptakan lingkungan pembelajaran yang menarik, tetapi juga memperkenalkan konsep pembelajaran berbasis teknologi secara luas. Munculnya komputer pribadi di sekolah-sekolah menciptakan fondasi bagi integrasi teknologi dalam kurikulum pendidikan, mengubah paradigma pembelajaran menuju pendekatan yang lebih interaktif dan inovatif.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Batas 2 -->
+    <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16 ">
+        <div data-aos="fade-up-right" data-aos-easing="ease-in-sine" class="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:h-full">
+          <img
+            alt="eLearning"
+            src="./img/eLearning.jpeg"
+            class="absolute inset-0 object-cover w-full h-full"
+          />
+        </div>
+        <div data-aos="fade-up-left" data-aos-easing="ease-in-sine" class="lg:py-8 lg:order-last">
+          <h2 class="text-3xl font-bold text-orange-600 sm:text-4xl">Tahun 1990an - 2000an</h2>
+          <p class="mt-4 font-light text-justify text-white">
+            Dalam periode 1990-an hingga awal 2000-an, pendidikan mengalami transformasi signifikan dengan pemanfaatan internet dan multimedia. Berkembangnya penggunaan internet sebagai sumber daya pendidikan membuka akses tak terbatas kepada siswa dan pendidik untuk mendapatkan informasi dari seluruh dunia. Perkembangan perangkat lunak pendidikan multimedia tidak hanya meningkatkan interaktivitas dalam pembelajaran tetapi juga memperkaya pengalaman belajar melalui elemen visual dan auditif. Munculnya e-learning dan kursus online membuka pintu bagi pembelajaran jarak jauh, memberikan fleksibilitas waktu dan tempat bagi para pelajar. Perubahan ini tidak hanya memperluas aksesibilitas terhadap pendidikan, tetapi juga memacu inovasi dalam metode pengajaran, menciptakan lingkungan pembelajaran yang lebih dinamis dan terhubung.
+          </p>
+        </div> 
+      </div>
+    </div>
+    <!-- Batas 3 -->
+    <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8 lg:py-16 ">
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16 ">
+        <div data-aos="fade-up-left" data-aos-easing="ease-in-sine" class="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:h-full lg:order-last">
+          <img
+            alt="Moodle VS Blackboard"
+            src="./img/moodleblackboard1.png"
+            class="absolute inset-0 object-cover w-full h-full"
+          />
+        </div>
+        <div data-aos="fade-up-right" data-aos-easing="ease-in-sine" class="lg:py-8">
+          <h2 class="text-3xl font-bold text-orange-600 sm:text-4xl">Tahun 2000an - 2010an</h2>
+          <p class="mt-4 font-light text-justify text-white">
+            Selama masa keemasan e-learning pada periode 2000-an hingga 2010-an, terjadi kemajuan besar dalam pengembangan pendidikan digital. Sistem manajemen pembelajaran (LMS) seperti Blackboard dan Moodle menjadi katalisator penting dalam mengorganisir dan menyajikan materi pembelajaran secara online, memungkinkan pendidik untuk merancang kurikulum interaktif dan melibatkan siswa secara lebih efisien. Sementara itu, platform kursus online seperti Khan Academy dan Coursera merevolusi cara belajar dengan menyediakan akses terbuka terhadap berbagai materi pembelajaran dari instruktur di seluruh dunia. Peningkatan penggunaan podcast dan video pembelajaran tidak hanya memperkaya pengalaman belajar, tetapi juga memberikan alternatif fleksibel bagi siswa untuk mengakses informasi. Periode ini mencirikan pertumbuhan eksponensial dalam pendekatan e-learning, memperkuat konsep bahwa pendidikan dapat diakses secara global melalui platform digital.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8 lg:py-16 ">
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16 ">
+        <div data-aos="fade-up-right" data-aos-easing="ease-in-sine" class="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:h-full ">
+          <img
+            alt="AR"
+            src="./img/AR.png"
+            class="absolute inset-0 object-cover w-full h-full"
+          />
+        </div>
+        <div data-aos="fade-up-left" data-aos-easing="ease-in-sine" class="lg:py-8 lg:order-last">
+          <h2 class="text-3xl font-bold text-orange-600 sm:text-4xl">Tahun 2010an - Sekarang</h2>
+          <p class="mt-4 font-light text-justify text-white">
+            Dekade 2010-an hingga kini ditandai dengan kemajuan signifikan dalam pendidikan berkat munculnya platform interaktif seperti edX dan Udacity. Penggunaan perangkat lunak pembelajaran adaptif yang disesuaikan dengan kebutuhan siswa semakin meningkat, menciptakan pengalaman pembelajaran yang personal. Selain itu, konsep pembelajaran jarak jauh dan kuliah online semakin diterima luas, memberikan fleksibilitas akses terhadap pengetahuan. Teknologi realitas virtual dan augmented reality juga turut memperkaya pengalaman belajar melalui simulasi dan praktik, menggambarkan komitmen terus-menerus dalam memanfaatkan teknologi untuk meningkatkan proses pembelajaran.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8 lg:py-16 ">
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16 ">
+        <div data-aos="fade-up-left" data-aos-easing="ease-in-sine" class="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:h-full lg:order-last">
+          <img
+            alt="blockchain"
+            src="./img/blockchain.jpg"
+            class="absolute inset-0 object-cover w-full h-full"
+          />
+        </div>
+        <div data-aos="fade-up-right" data-aos-easing="ease-in-sine" class="lg:py-8">
+          <h2 class="text-3xl font-bold text-orange-600 sm:text-4xl">Tahun 2020an - Sekarang</h2>
+          <p class="mt-4 font-light text-justify text-white">
+            Dalam dekade 2020-an hingga saat ini, terjadi eksperimen yang semakin intensif dengan pemanfaatan teknologi blockchain dalam dunia pendidikan. Terutama, fokusnya adalah pada pengelolaan catatan akademis dan sertifikasi, dengan blockchain digunakan untuk memberikan keamanan, keandalan, dan transparansi terhadap riwayat pendidikan. Selain itu, muncul konsep baru seperti token pendidikan dan portofolio digital yang menggunakan teknologi blockchain untuk memberikan solusi inovatif dalam mendokumentasikan pencapaian dan keterampilan siswa secara terdesentralisasi. Hal ini tidak hanya membawa efisiensi administratif, tetapi juga membuka potensi untuk meningkatkan validitas dan transferabilitas sertifikasi pendidikan di seluruh ekosistem pendidikan.
+          </p>
+        </div>
+      </div>
+    </div>
+    </section>
+<!-- Timeline End -->
+
+<!-- Article Start -->
+    <section id="article" class="pb-10 bg-baltic-950">
+      <div class="py-10">
+        <h1 class="text-3xl font-semibold text-center text-orange-500 lg:text-4xl">Artikel</h1>
+      </div>
+
+      <div class="grid grid-cols-1 gap-4 px-10 py-5 lg:grid-cols-2 lg:gap-8">
+        <!-- Awal Artikel 1 -->
+        <article class="flex transition bg-baltic-800 hover:shadow-xl">
+          <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
+            <time
+              datetime="2022-12-08"
+              class="flex items-center justify-between gap-4 text-xs font-bold text-white uppercase">
+              <span>2022</span>
+              <span class="flex-1 w-px bg-slate-400/10"></span>
+              <span>Des 08</span>
+            </time>
+          </div>
+        
+          <div class="hidden sm:block sm:basis-56">
+            <img
+              alt="peranan kecerdasan buatan"
+              src="img/peranan-kecerdasan-buatan.jpeg"
+              class="object-cover w-full h-full aspect-square"
+            />
+          </div>
+          <div class="flex flex-col justify-between flex-1">
+            <div class="p-4 border-s border-gray-900/10 sm:border-l-transparent sm:p-6">
+              <a href="https://ppg.kemdikbud.go.id/news/peranan-kecerdasan-buatan-artificial-intelligence-dalam-pendidikan"
+              target="_blank">
+                <h3 class="font-bold uppercase text-amber-400">
+                  Peranan Kecerdasan Buatan (Artificial Intelligence) dalam Pendidikan
+                </h3>
+              </a>
+        
+              <p class="mt-2 font-light text-white line-clamp-4 text-sm/relaxed">
+                Teknologi (Artificial Intelligence) AI atau kecerdasan buatan  mengalami perkembangan yang masif dari tahun ke tahun. Kehadirannya dengan fitur, fungsi, dan tampilan yang baru semakin berdampak pada banyak aspek kehidupan manusia tidak terkecuali dalam pendidikan (Luger dan Stubblefield, 1993). 
+              </p>
+            </div>
+        
+            <div class="sm:flex sm:items-end sm:justify-end">
+              <a
+                href="https://ppg.kemdikbud.go.id/news/peranan-kecerdasan-buatan-artificial-intelligence-dalam-pendidikan"
+                target="_blank"
+                class="block px-5 py-3 text-xs font-bold text-center text-white uppercase transition bg-orange-600 hover:bg-orange-700"
+              >
+                Read Blog
+              </a>
+            </div>
+          </div>
+        </article>
+        <!-- Akhir Artikel 1 -->
+
+        <!-- Awal Artikel 2 -->
+        <article class="flex transition bg-baltic-800 hover:shadow-xl">
+          <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
+            <time
+              datetime="2023-06-29"
+              class="flex items-center justify-between gap-4 text-xs font-bold text-white uppercase"
+            >
+              <span>2023</span>
+              <span class="flex-1 w-px bg-slate-400/10"></span>
+              <span>Jun 29</span>
+            </time>
+          </div>
+        
+          <div class="hidden sm:block sm:basis-56">
+            <img
+              alt="belajar"
+              src="img/belajar.jpg"
+              class="object-cover w-full h-full aspect-square"
+            />
+          </div>
+        
+          <div class="flex flex-col justify-between flex-1">
+            <div class="p-4 border-s border-gray-900/10 sm:border-l-transparent sm:p-6">
+              <a href="https://akupintar.id/info-pintar/-/blogs/4-peran-ai-yang-memudahkan-pembelajaran-di-dalam-kelas" target="_blank ">
+                <h3 class="font-bold uppercase text-amber-400">
+                  4 Peran AI yang Memudahkan Pembelajaran di dalam Kelas
+                </h3>
+              </a>
+        
+              <p class="mt-2 font-light text-white line-clamp-5 text-sm/relaxed">
+                Teknologi pendidikan pada dasarnya terkait dengan bagaimana teknologi digunakan untuk meningkatkan proses pembelajaran. Kecerdasan Buatan (AI;Artificial Intelligence) merupakan teknologi pendidikan untuk memudahkan pembelajaran yang, sayangnya, masih belum digunakan dengan maksimal
+              </p>
+            </div>
+        
+            <div class="sm:flex sm:items-end sm:justify-end">
+              <a
+                href="https://akupintar.id/info-pintar/-/blogs/4-peran-ai-yang-memudahkan-pembelajaran-di-dalam-kelas" target="_blank"
+                class="block px-5 py-3 text-xs font-bold text-center text-white uppercase transition bg-orange-600 hover:bg-orange-700"
+              >
+                Read Blog
+              </a>
+            </div>
+          </div>
+        </article>
+        <!-- Akhir Artikel 2 -->
+
+        <!-- Awal Artikel 3 -->
+        <article class="flex transition bg-baltic-800 hover:shadow-xl">
+          <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
+            <time
+              datetime="2022-10-10"
+              class="flex items-center justify-between gap-4 text-xs font-bold text-white uppercase"
+            >
+              <span>2023</span>
+              <span class="flex-1 w-px bg-slate-400/10"></span>
+              <span>Jun 17</span>
+            </time>
+          </div>
+        
+          <div class="hidden sm:block sm:basis-56">
+            <img
+              alt="Peran AI"
+              src="img/peran_ai.jpg"
+              class="object-cover w-full h-full aspect-square"
+            />
+          </div>
+        
+          <div class="flex flex-col justify-between flex-1">
+            <div class="p-4 border-s border-gray-900/10 sm:border-l-transparent sm:p-6">
+              <a href="https://eraspace.com/artikel/post/peran-ai-dalam-dunia-pendidikan-bantu-siswa-dan-guru"v target="_blank">
+                <h3 class="font-bold uppercase text-amber-400">
+                  Peran AI Dalam Dunia Pendidikan, Bantu Siswa dan Guru
+                </h3>
+              </a>
+        
+              <p class="mt-2 font-light text-white line-clamp-4 text-sm/relaxed">
+                Perkembangan artificial intelligence saat ini semakin pesat yang membuatnya banyak dibicarakan. Artificial intelligence digadang-gadang memiliki banyak manfaat dalam berbagai bidang. Mulai dari kesehatan, kesenian, otomotif, bahkan pendidikan. Peran AI dimanfaatkan untuk membantu dan meringankan pekerjaan manusia.
+              </p>
+            </div>
+        
+            <div class="sm:flex sm:items-end sm:justify-end">
+              <a
+                href="https://eraspace.com/artikel/post/peran-ai-dalam-dunia-pendidikan-bantu-siswa-dan-guru" target="_blank"
+                class="block px-5 py-3 text-xs font-bold text-center text-white uppercase transition bg-orange-600 hover:bg-orange-700"
+              >
+                Read Blog
+              </a>
+            </div>
+          </div>
+        </article>
+        <article class="flex transition bg-baltic-800 hover:shadow-xl">
+          <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
+            <time
+              datetime="2022-05-18"
+              class="flex items-center justify-between gap-4 text-xs font-bold text-white uppercase"
+            >
+              <span>2022</span>
+              <span class="flex-1 w-px bg-slate-400/10"></span>
+              <span>Mei 18</span>
+            </time>
+          </div>
+        
+          <div class="hidden sm:block sm:basis-56">
+            <img
+              alt="AI"
+              src="img/AItek.jpg"
+              class="object-cover w-full h-full aspect-square"
+            />
+          </div>
+        
+          <div class="flex flex-col justify-between flex-1">
+            <div class="p-4 border-s border-gray-900/10 sm:border-l-transparent sm:p-6">
+              <a href="https://geotimes.id/opini/penerapan-artificial-intelligence-ai-dalam-bidang-pendidikan/" target="_blank">
+                <h3 class="font-bold uppercase text-amber-400">
+                  Penerapan Artificial Intelligence (AI) dalam Bidang Pendidikan
+                </h3>
+              </a>
+        
+              <p class="mt-2 font-light text-white line-clamp-4 text-sm/relaxed">
+                Teknologi berkembang dengan sangat pesat, bahkan pada era revolusi industri 4.0 ini, tengah gencar dikembangkan teknologi artificial intelligence atau dapat diartikan dengan kecerdasan buatan.
+              </p>
+            </div>
+        
+            <div class="sm:flex sm:items-end sm:justify-end">
+              <a
+                href="https://geotimes.id/opini/penerapan-artificial-intelligence-ai-dalam-bidang-pendidikan/" target="_blank"
+                class="block px-5 py-3 text-xs font-bold text-center text-white uppercase transition bg-orange-600 hover:bg-orange-700"
+              >
+                Read Blog
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <span class="flex items-center px-10">
+        <span class="flex-1 h-px bg-white"></span>
+        <span class="pl-6 font-light text-orange-500 lg:font-normal hover:underline"><a href="article.html" target="_blank">Load More...</a></span>
+      </span>
+
+    </section>
+  <!-- Article End -->
+    
+  <!-- Sumber Daya Pendidikan Start -->
+  <section id="sumberdaya" class="pt-10 bg-baltic-900 pb-36">
+    <div class="py-10">
+      <h1 class="text-3xl font-semibold text-center text-orange-500 lg:text-4xl">Sumber Daya Pendidikan</h1>
+    </div>
+
+    <div class="container mx-auto">
+      <div class="grid grid-cols-3 gap-5 p-5 place-items-center lg:grid-cols-6">
+        <div class="mb-5 lg:mb-0">
+          <a href="https://www.w3schools.com/" target="_blank" class="group">
+            <div class="w-[70px] h-[70px] bg-white rounded-lg flex justify-center items-center border-[3px] border-[#04aa6d] shadow-sm shadow-[#04aa6d] group-hover:scale-110 group-hover:shadow-md group-hover:shadow-[#04aa6d] transition duration-200 lg:ml-1 w3s">
+              <img src="img/w3s.png" alt="w3school" class="w-10 h-10">
+            </div>
+            <h3 class="mt-3 text-sm text-center text-white transition duration-200 lg:text-base group-hover:scale-110">
+            W3School
+            </h3>
+          </a>
+        </div>
+        
+          <a href="https://exercism.org/" target="_blank" class="mb-5 group lg:mb-0">
+            <div class="w-[70px] h-[70px] bg-white rounded-lg flex justify-center items-center border-[3px] border-[#5800ff] shadow-sm shadow-[#5800ff] group-hover:scale-110 group-hover:shadow-md group-hover:shadow-[#5800ff] transition duration-200 lg:ml-1">
+              <img src="img/exercism.png" alt="exercism" class="w-14 h-14">
+            </div>
+            <h3 class="mt-3 text-sm text-center text-white transition duration-200 lg:text-base group-hover:scale-110">
+              Exercism
+            </h3>
+          </a>
+
+        <a href="https://www.ruangguru.com/" target="_blank" class="mb-5 group lg:mb-0">
+          <div class="w-[70px] h-[70px] bg-white rounded-lg flex justify-center items-center border-[3px] border-[#2abac4] shadow-sm shadow-[#2abac4] group-hover:scale-110 group-hover:shadow-md group-hover:shadow-[#2abac4] transition duration-200 ml-1 lg:ml-3">
+            <img src="img/ruangguru.png" alt="ruangguru" class="w-12">
+          </div>
+          <h3 class="mt-3 text-sm text-center text-white transition duration-200 lg:text-base group-hover:scale-110">
+            Ruang Guru
+          </h3>
+        </a>
+
+        <a href="https://quizizz.com/" target="_blank" class="group">
+          <div class="w-[70px] h-[70px] bg-white rounded-lg flex justify-center items-center border-[3px] border-[#461a42] shadow-sm shadow-[#461a42] group-hover:scale-110 group-hover:shadow-md group-hover:shadow-[#461a42] transition duration-200">
+            <img src="img/Quizziz.png" alt="quizizz" class="w-10 h-10">
+          </div>
+          <h3 class="mt-3 text-sm text-center text-white transition duration-200 lg:text-base group-hover:scale-110">
+            Quizizz
+          </h3>
+        </a>
+        <a href="https://myskill.id/" target="_blank" class="group">
+          <div class="w-[70px] h-[70px] bg-white rounded-lg flex justify-center items-center border-[3px] border-[#34a3ad] shadow-sm shadow-[#34a3ad] group-hover:scale-110 group-hover:shadow-md group-hover:shadow-[#34a3ad] transition duration-200">
+            <img src="img/myskill.png" alt="myskill" class="w-16">
+          </div>
+          <h3 class="mt-3 text-sm text-center text-white transition duration-200 lg:text-base group-hover:scale-110">
+            Myskill
+          </h3>
+        </a>
+        <a href="https://id.duolingo.com/" target="_blank" class="group">
+          <div class="w-[70px] h-[70px] bg-white rounded-lg flex justify-center items-center border-[3px] border-[#58cc02] shadow-sm shadow-[#58cc02] group-hover:scale-110 group-hover:shadow-md group-hover:shadow-[#58cc02] transition duration-200">
+            <img src="img/duolingo.png" alt="duolingo" class="w-12">
+          </div>
+          <h3 class="mt-3 text-sm text-center text-white transition duration-200 lg:text-base group-hover:scale-110">
+            Duolingo
+          </h3>
+        </a>
+      </div>
+      <span class="flex items-center px-10">
+        <span class="flex-1 h-px bg-white"></span>
+        <span class="pl-6 font-light text-orange-500 lg:font-normal hover:underline"><a href="sumberdaya.html">Load More...</a></span>
+      </span>
+    </div>
+  </section>
+  <!-- Sumber Daya Pendidikan End -->
+
+  <!-- Tentang Kami Start -->
+  <section id="about" class=" bg-baltic-950 pb-36">
+    <div class="py-10">
+      <h1 class="text-3xl font-semibold text-center text-orange-500 lg:text-4xl">Tentang Kami</h1>
+    </div>
+    <div class="py-8">
+      <h2 class="text-2xl font-semibold text-center text-orange-500 lg:text-3xl">Educatech Team</h2>
+    </div>
+
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-5 place-items-center gap-7">
+        <!-- component -->
+          <div>
+              <div class="py-3 bg-white rounded-lg shadow-xl w-52">
+                  <div class="p-2 photo-wrapper">
+                      <img class="w-32 h-32 mx-auto rounded-full" src="img/noavamen.avif" alt="Perdiansyah">
+                  </div>
+                  <div class="p-2">
+                      <h3 class="text-xl font-medium leading-8 text-center text-gray-900">Perdiansyah</h3>
+                      <div class="text-xs font-semibold text-center text-gray-400">
+                          <p>F1G121081</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="">
+              <div class="py-3 bg-white rounded-lg shadow-xl w-52">
+                  <div class="p-2 photo-wrapper">
+                      <img class="w-32 h-32 mx-auto rounded-full" src="img/noavamen.avif" alt="Jejen">
+                  </div>
+                  <div class="p-2">
+                      <h3 class="text-xl font-medium leading-8 text-center text-gray-900">Jejen</h3>
+                      <div class="text-xs font-semibold text-center text-gray-400">
+                          <p>F1G121065</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div>
+              <div class="py-3 bg-white rounded-lg shadow-xl w-52">
+                  <div class="p-2 photo-wrapper">
+                      <img class="w-32 h-32 mx-auto rounded-full" src="img/noavafemale.jpg" alt="Yulinar">
+                  </div>
+                  <div class="p-2">
+                      <h3 class="text-xl font-medium leading-8 text-center text-gray-900">Yulinar</h3>
+                      <div class="text-xs font-semibold text-center text-gray-400">
+                          <p>F1G121089</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="">
+              <div class="py-3 bg-white rounded-lg shadow-xl w-52">
+                  <div class="p-2 photo-wrapper">
+                      <img class="w-32 h-32 mx-auto rounded-full" src="img/noavafemale.jpg" alt="Indrayuni">
+                  </div>
+                  <div class="p-2">
+                      <h3 class="text-xl font-medium leading-8 text-center text-gray-900">Indrayuni</h3>
+                      <div class="text-xs font-semibold text-center text-gray-400">
+                          <p>F1G121022</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="">
+              <div class="py-3 bg-white rounded-lg shadow-xl w-52">
+                  <div class="p-2 photo-wrapper">
+                      <img class="w-32 h-32 mx-auto rounded-full" src="img/noavamen.avif" alt="Jafarudin Syah">
+                  </div>
+                  <div class="p-2">
+                      <h3 class="text-xl font-medium leading-8 text-center text-gray-900">Jafarudin Syah</h3>
+                      <div class="text-xs font-semibold text-center text-gray-400">
+                          <p>F1G121064</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </section>
+  <!-- Tentang Kami End -->
+
+  <!-- Footer Start -->
+  <footer class="bg-baltic-900">
+    <div class="max-w-5xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
+      <div class="flex justify-center text-teal-600">
+        <a href="#home" class="flex">
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0.00 0.00 450.00 384.00" class="w-12 h-12 mr-3">
+            <path fill="#ea580b" d="   M 111.97 65.60   Q 84.78 59.63 57.37 53.23   C 53.91 52.42 51.74 49.04 52.25 45.66   Q 52.95 40.99 58.17 39.75   Q 177.27 11.37 220.56 1.23   Q 228.85 -0.71 238.14 1.48   Q 317.43 20.19 400.24 39.98   C 404.74 41.06 406.28 45.89 404.52 49.92   C 403.64 51.94 401.97 52.80 399.93 53.29   Q 368.79 60.86 335.47 68.47   Q 334.88 68.61 334.88 69.21   Q 335.01 84.23 334.91 100.75   Q 334.90 102.15 336.26 102.69   C 360.09 112.14 382.46 126.47 397.01 146.90   Q 404.74 157.75 409.33 171.96   Q 409.76 173.28 410.91 174.06   Q 444.85 197.21 446.45 237.36   Q 446.72 244.01 445.13 252.28   C 440.78 274.97 427.09 293.34 406.79 304.77   Q 401.53 307.73 395.52 309.62   C 394.38 309.98 393.49 310.99 392.92 312.01   Q 377.62 339.31 351.19 355.34   C 342.69 360.50 333.20 365.14 323.73 368.39   C 300.81 376.28 277.16 380.17 253.24 381.27   Q 236.20 382.05 215.12 381.69   C 191.53 381.30 167.80 378.76 145.14 372.32   Q 124.09 366.34 108.24 357.17   Q 78.88 340.17 63.16 311.16   A 2.66 2.64 -5.0 0 0 61.66 309.91   C 36.25 301.59 17.34 280.05 11.82 254.06   C 5.09 222.36 18.43 191.41 45.58 174.18   Q 46.70 173.48 47.09 172.18   C 57.20 138.24 88.23 114.98 120.17 102.88   A 2.16 2.15 -10.5 0 0 121.56 100.87   L 121.55 79.05   A 0.38 0.38 0.0 0 0 121.11 78.67   Q 120.97 78.69 120.84 78.74   Q 120.63 78.82 120.49 78.99   Q 116.10 83.93 111.43 88.18   Q 88.88 108.70 62.13 122.04   A 2.10 2.09 -7.2 0 0 61.01 123.48   Q 58.76 133.94 46.94 134.90   C 44.20 135.12 41.61 133.87 39.45 132.33   A 1.81 1.79 45.3 0 0 37.39 132.31   Q 29.30 137.90 20.99 144.29   C 18.69 146.06 13.82 149.54 11.18 147.29   C 6.27 143.09 4.22 133.53 4.55 127.86   Q 4.86 122.50 10.14 121.86   Q 19.60 120.72 28.63 119.37   Q 30.95 119.02 33.22 118.23   A 1.25 1.24 88.6 0 0 34.01 117.40   Q 34.91 114.22 36.54 112.30   Q 44.16 103.33 54.99 109.43   A 1.12 1.12 0.0 0 0 56.12 109.41   C 60.34 106.77 64.95 104.60 69.17 101.98   Q 93.42 86.90 112.39 66.95   Q 113.37 65.91 111.97 65.60   Z   M 128.97 228.15   Q 131.14 205.82 151.09 192.80   C 158.74 187.81 167.83 185.64 177.07 185.67   Q 229.41 185.83 280.24 185.65   C 288.39 185.62 295.73 187.09 303.04 190.92   C 326.84 203.41 334.93 231.23 323.93 255.30   C 318.21 267.81 307.20 277.94 295.22 284.16   Q 288.92 287.44 281.32 290.49   Q 280.92 290.65 281.03 291.05   L 292.39 334.19   Q 292.55 334.78 293.14 334.65   Q 308.69 331.25 323.31 324.13   Q 352.71 309.79 363.69 278.97   Q 368.88 264.38 370.74 247.62   Q 373.36 224.07 372.64 194.87   C 371.82 161.58 332.91 142.35 304.74 134.56   Q 304.24 134.42 303.77 134.63   Q 273.04 148.61 238.06 148.63   Q 226.83 148.63 214.95 148.39   Q 197.00 148.03 177.28 143.08   Q 165.23 140.06 154.08 134.67   A 1.94 1.93 -39.8 0 0 152.71 134.55   Q 135.83 139.35 120.94 147.51   C 101.77 158.01 84.68 173.61 84.50 196.95   Q 84.32 218.79 85.82 239.25   C 87.94 268.04 95.76 297.68 119.90 315.60   Q 133.44 325.66 152.63 331.64   Q 158.30 333.41 164.20 334.67   A 0.88 0.88 0.0 0 0 165.23 334.04   L 176.48 291.47   A 0.94 0.93 -72.1 0 0 175.91 290.35   C 159.86 284.09 143.79 274.35 135.35 258.72   Q 127.43 244.06 128.97 228.15   Z   M 181.48 207.35   C 175.38 207.71 171.08 212.63 168.46 217.96   A 0.56 0.56 0.0 0 0 168.97 218.77   L 195.44 218.70   A 0.68 0.68 0.0 0 0 196.04 217.69   C 192.86 211.83 188.76 206.93 181.48 207.35   Z   M 284.20 217.53   Q 282.28 213.96 279.50 211.05   C 274.93 206.29 267.23 205.99 262.32 210.42   Q 258.50 213.86 256.78 218.09   A 0.50 0.50 0.0 0 0 257.24 218.77   L 283.48 218.73   Q 284.85 218.73 284.20 217.53   Z   M 198.11 231.44   A 1.22 1.22 0.0 0 0 199.30 229.99   L 198.03 223.41   A 1.22 1.22 0.0 0 0 196.84 222.42   L 167.45 222.35   A 1.22 1.22 0.0 0 0 166.25 223.33   L 164.90 230.05   A 1.22 1.22 0.0 0 0 166.09 231.51   L 198.11 231.44   Z   M 255.62 222.37   A 1.23 1.23 0.0 0 0 254.41 223.40   L 253.28 230.06   A 1.23 1.23 0.0 0 0 254.50 231.50   L 286.27 231.48   A 1.23 1.23 0.0 0 0 287.48 230.04   L 286.32 223.41   A 1.23 1.23 0.0 0 0 285.11 222.39   L 255.62 222.37   Z   M 165.88 234.50   A 0.91 0.91 0.0 0 0 164.99 235.57   L 166.27 242.90   A 0.91 0.91 0.0 0 0 167.17 243.65   L 196.71 243.58   A 0.91 0.91 0.0 0 0 197.61 242.79   L 198.58 235.57   A 0.91 0.91 0.0 0 0 197.68 234.54   L 165.88 234.50   Z   M 254.78 234.51   A 0.99 0.99 0.0 0 0 253.80 235.66   L 255.00 242.85   A 0.99 0.99 0.0 0 0 255.98 243.68   L 285.41 243.57   A 0.99 0.99 0.0 0 0 286.39 242.71   L 287.30 235.64   A 0.99 0.99 0.0 0 0 286.32 234.52   L 254.78 234.51   Z   M 168.69 248.49   C 175.40 261.44 188.82 260.78 195.67 248.20   A 0.48 0.47 14.2 0 0 195.25 247.50   L 169.31 247.47   A 0.70 0.70 0.0 0 0 168.69 248.49   Z   M 271.62 257.88   A 12.85 12.84 -70.8 0 0 279.40 254.12   Q 279.41 254.11 282.82 250.66   Q 285.94 247.50 281.50 247.49   L 258.18 247.47   A 0.76 0.76 0.0 0 0 257.51 248.58   C 260.28 253.79 265.45 258.55 271.62 257.88   Z   M 266.65 294.90   C 258.71 297.26 250.20 297.88 241.62 298.55   C 236.81 298.92 232.13 298.62 227.31 298.88   Q 221.74 299.18 216.54 298.78   Q 202.91 297.71 190.83 295.05   A 0.93 0.92 -75.8 0 0 189.74 295.71   L 178.49 336.75   A 0.72 0.71 12.1 0 0 179.08 337.65   C 211.43 342.33 245.27 341.68 278.09 337.53   Q 279.26 337.39 278.94 336.25   L 267.74 295.51   A 0.88 0.87 -15.6 0 0 266.65 294.90   Z"/>
+            </svg>
+          <h1 class="mt-2 text-2xl font-semibold text-white">Educatech</h1>
+        </a>
+      </div>
+  
+      <p class="max-w-md mx-auto mt-6 leading-relaxed text-center text-white">
+        Kumpulan informasi untuk edukasi perkembangan teknologi di dunia pendidikan
+      </p>
+  
+      <ul class="flex flex-wrap justify-center gap-6 mt-12 md:gap-8 lg:gap-12">
+        <li>
+          <a class="text-white transition hover:text-orange-500/75" href="#beranda"> Beranda </a>
+        </li>
+  
+        <li>
+          <a class="text-white transition hover:text-orange-500/75" href="#article"> Artikel </a>
+        </li>
+  
+        <li>
+          <a class="text-white transition hover:text-orange-500/75" href="#sumberdaya"> Sumber Daya Pendidikan </a>
+        </li>
+  
+        <li>
+          <a class="text-white transition hover:text-orange-500/75" href="#about"> Tentang Kami </a>
+        </li>
+        </ul>
+        
+      <ul class="flex justify-center gap-6 mt-12 md:gap-8">
+        <li>
+          <a
+            href="/"
+            rel="noreferrer"
+            target="_blank"
+            class="text-white transition hover:text-blue-700"
+          >
+            <span class="sr-only">Facebook</span>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill-rule="evenodd"
+                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>
+        </li>
+  
+        <li>
+          <a
+            href="/"
+            rel="noreferrer"
+            target="_blank"
+            class="text-white transition hover:text-sky-600"
+          >
+            <span class="sr-only">Twitter</span>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+              />
+            </svg>
+          </a>
+        </li>
+  
+        <li>
+          <a
+            href="/"
+            rel="noreferrer"
+            target="_blank"
+            class="text-white transition hover:text-slate-900"
+          >
+            <span class="sr-only">GitHub</span>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill-rule="evenodd"
+                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <!-- Footer End -->
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
+    </script>
+    <script src="./JS/project.js"></script>
+  </body>
+</html>
